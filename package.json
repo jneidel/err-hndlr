@@ -1,0 +1,36 @@
+{
+  "name": "err-hndlr",
+  "version": "0.0.0",
+  "description": "Error handler for either throwing locally or sending a bug ticket to a rest api",
+  "repository": "jneidel/err-hndlr",
+  "license": "MIT",
+  "author": {
+    "name": "Jonathan Neidel",
+    "email": "github@jneidel.com",
+    "url": "https://jneidel.com"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "ava test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "latest",
+    "nodemon": "latest"
+  },
+  "ava": {
+    "files": [
+      "test.js",
+      "test/*.test.js"
+    ]
+  },
+  "keywords": [
+    ""
+  ]
+}
