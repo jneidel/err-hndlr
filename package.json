@@ -16,20 +16,11 @@
   "engines": {
     "node": ">=8"
   },
-  "scripts": {
-    "test": "ava test.js"
+  "scripts": {},
+  "dependencies": {
+    "axios": "^0.18.0"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "ava": "latest",
-    "nodemon": "latest"
-  },
-  "ava": {
-    "files": [
-      "test.js",
-      "test/*.test.js"
-    ]
-  },
+  "devDependencies": {},
   "keywords": [
     ""
   ]
