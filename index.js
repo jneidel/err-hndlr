@@ -1,6 +1,6 @@
 "use strict";
 const axios = require( "axios" );
-const chalk = require("chalk");
+const chalk = require( "chalk" );
 
 // Defaults if init() never called
 let throwErrors = true;
@@ -19,19 +19,19 @@ function handleOptions( options ) {
     const data = {};
 
     if ( pkg.name )
-      data.name = pkg.name
+      data.name = pkg.name;
     if ( pkg.version )
-      data.version = pkg.version
+      data.version = pkg.version;
 
     if ( Object.keys( data ).length > 0 )
       baseData = Object.assign( baseData, { app: data } );
   }
 
   function handleOs() {
-    const os = require("os");
+    const os = require( "os" );
 
     baseData = Object.assign( baseData, { os: {
-      type: os.type(),
+      type    : os.type(),
       platform: os.platform(),
     } } );
   }
@@ -44,9 +44,9 @@ function handleOptions( options ) {
 
 function createData( error, base, data ) {
   const errorData = {
-    msg: error.message,
+    msg  : error.message,
     stack: error.stack,
-  }
+  };
   return Object.assign( base, { error: errorData }, data );
 }
 
@@ -55,7 +55,7 @@ function sendRequest( address, data ) {
 }
 
 function throwError( error ) {
-  process.stderr.write( `${chalk.red(error.stack)}\n` );
+  process.stderr.write( `${chalk.red( error.stack )}\n` );
 }
 
 async function throwFunc( msg = "", data = {}, isExit = false ) {
@@ -68,11 +68,11 @@ async function throwFunc( msg = "", data = {}, isExit = false ) {
     await sendRequest( apiAddress, reqData );
   }
 
-  if ( isExit ) process.exit(); 
+  if ( isExit ) process.exit();
 }
 
 module.exports = {
   throw: throwFunc,
   init,
-}
+};
 
