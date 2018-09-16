@@ -58,7 +58,7 @@ function throwError( error ) {
   process.stderr.write( `${chalk.red(error.stack)}\n` );
 }
 
-async function error( msg = "", data = {}, isExit = false ) {
+async function throwFunc( msg = "", data = {}, isExit = false ) {
   const error = new Error( msg );
 
   if ( throwErrors ) {
@@ -72,7 +72,7 @@ async function error( msg = "", data = {}, isExit = false ) {
 }
 
 module.exports = {
-  error,
+  throw: throwFunc,
   init,
 }
 

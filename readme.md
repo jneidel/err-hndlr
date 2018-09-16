@@ -27,7 +27,7 @@ errHndlr.init(
   }
 )
 
-errHndlr.error(
+errHndlr.throw(
   "smt went wrong",
   {
     env: {...},
@@ -138,10 +138,10 @@ Pass a truthy value to include the `os.type()` and `os.platform()` in every requ
 }
 ```
 
-### error( msg, data, isExit )
+### throw( msg, data, isExit )
 
 ```js
-errHndlr.error(
+errHndlr.throw(
   "something went wrong",
   data: {
     env: {...}
