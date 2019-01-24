@@ -1,6 +1,6 @@
 {
   "name": "err-hndlr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Error handler for either throwing locally or sending a bug ticket to a rest api",
   "repository": "jneidel/err-hndlr",
   "license": "MIT",
