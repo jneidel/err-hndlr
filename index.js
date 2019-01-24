@@ -59,7 +59,7 @@ function throwError( error ) {
 }
 
 async function throwFunc( msg = "", data = {}, isExit = false ) {
-  const error = new Error( msg );
+  const error = data.err ? data.err : new Error( msg );
 
   if ( throwErrors ) {
     throwError( error );
